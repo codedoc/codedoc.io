@@ -20,7 +20,7 @@ var server = express();
 
 server
   .use(express.bodyParser())
-  .use(express.static(__dirname + '/public'))
+  .use(express.static(__dirname + '/../public'))
   .listen(8002);
 
 server.get('/:user/:project', function(req, res) {
@@ -28,7 +28,7 @@ server.get('/:user/:project', function(req, res) {
   res.redirect('/#/docs/' + params.user + '/' + params.project);
 });
 
-server.get('/docs/:user/:project', function(req, res) {
+server.get('/api/0/docs/:user/:project', function(req, res) {
   var params = req.params;
   var docs = [];
   var parsed;

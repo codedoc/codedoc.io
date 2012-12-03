@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "description": "App main component",
+  "dependencies": {
+    "component/underscore": "*",
+    "component/jquery": "*",
+    "timoxley/backbone-view": "*",
+    "spini/backbone-router": "*",
+    "spini/backbone-history": "*"
+  },
+  "scripts": [
+    "js/codedoc.js",
+    "js/codedoc.view.home.js",
+    "js/codedoc.view.doc.js",
+    "js/codedoc.app.js"
+  ],
+  "styles": [
+    "css/style.css"
+  ],
+  "remotes": [
+    "https://github.com/spini/backbone-router",
+    "https://github.com/spini/backbone-history"
+  ]
+}
