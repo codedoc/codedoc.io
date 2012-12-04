@@ -15,28 +15,31 @@ var express = require('express');
 // var join = require('path').join;
 // var redox = require('redox');
 // var finder = require('github-finder')(credentials);
-// var build = require('./build.js');
+var build = require('./build.js');
 
 var server = express();
 
 server
-  // .use(express.favicon())
-  // .use(express.logger('dev'))
+  .use(express.favicon())
+  .use(express.logger('dev'));
+
+
+server.configure('development', function() {
+  server
+    .use(build)
+    .use(express.errorHandler({
+      dumpExceptions: true,
+      showStack: true
+    }));
+});
+
+server.configure('production', function() {
+  server.use(express.errorHandler());
+});
+
+server
   .use(express.static(__dirname + '/public'))
-  // .use(express.bodyParser());
-
-// server.configure('development', function() {
-//   server
-//     .use(build)
-//     .use(express.errorHandler({
-//       dumpExceptions: true,
-//       showStack: true
-//     }));
-// });
-
-// server.configure('production', function() {
-//   server.use(express.errorHandler());
-// });
+  .use(express.bodyParser());
 
 server.listen(8002, function() {
   console.log('Server listening on port: ' + 8002);
