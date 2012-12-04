@@ -1,1 +1,2 @@
-../client/Makefile
+all:
+	cd ../client; make

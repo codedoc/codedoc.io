@@ -1,0 +1,18 @@
+{
+  "name": "backbone-view",
+  "repo": "timoxley/backbone-view",
+  "description": "Backbone View component",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/underscore": "*",
+    "component/jquery": "*",
+    "timoxley/backbone-events": "*"
+  },
+  "development": {
+    "timoxley/assert": "*"
+  },
+  "scripts": [
+    "index.js"
+  ]
+}
