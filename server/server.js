@@ -11,10 +11,10 @@ var credentials = {
 };
 
 var express = require('express');
-// var request = require('superagent');
-// var join = require('path').join;
-// var redox = require('redox');
-// var finder = require('github-finder')(credentials);
+var request = require('superagent');
+var join = require('path').join;
+var redox = require('redox');
+var finder = require('github-finder')(credentials);
 var build = require('./build.js');
 
 var server = express();
@@ -46,29 +46,29 @@ server.listen(8002, function() {
 });
 
 
-// server.get('/:user/:project', function(req, res) {
-//   var params = req.params;
-//   res.redirect('/#/docs/' + params.user + '/' + params.project);
-// });
+server.get('/:user/:project', function(req, res) {
+  var params = req.params;
+  res.redirect('/#/docs/' + params.user + '/' + params.project);
+});
 
-// server.get('/api/0/docs/:user/:project', function(req, res) {
-//   var params = req.params;
-//   var docs = [];
-//   var parsed;
+server.get('/api/0/docs/:user/:project', function(req, res) {
+  var params = req.params;
+  var docs = [];
+  var parsed;
 
-//   finder.open({user: params.user, project: params.project})
-//     .on('file', function (file) {
-//       if (file.name.match(/.js$/)) {
-//         parsed = redox.parse((new Buffer(file.content, 'base64')).toString());
-//         docs.push({
-//           name: file.name,
-//           path: file.path,
-//           docs: parsed.docs,
-//           codes: parsed.codes
-//         });
-//       }
-//     })
-//     .on('end', function() {
-//         res.send(docs);
-//     });
-// });
+  finder.open({user: params.user, project: params.project})
+    .on('file', function (file) {
+      if (file.name.match(/.js$/)) {
+        parsed = redox.parse((new Buffer(file.content, 'base64')).toString());
+        docs.push({
+          name: file.name,
+          path: file.path,
+          docs: parsed.docs,
+          codes: parsed.codes
+        });
+      }
+    })
+    .on('end', function() {
+        res.send(docs);
+    });
+});

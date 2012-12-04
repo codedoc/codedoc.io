@@ -12,10 +12,14 @@
     "js/codedoc.js",
     "js/codedoc.view.home.js",
     "js/codedoc.view.doc.js",
-    "js/codedoc.app.js"
+    "js/codedoc.app.js",
+    "index.js"
   ],
   "styles": [
     "css/style.css"
+  ],
+  "local": [
+    "searchbox"
   ],
   "remotes": [
     "https://github.com/spini/backbone-router",

@@ -1,7 +1,7 @@
 
-SRC = $(wildcard client/app/js/*.js)
-CSS = $(wildcard client/app/css/*.css)
-HTML = $(wildcard client/app/templates/*.html)
+SRC = $(wildcard local/app/index.js local/app/js/*.js)
+CSS = $(wildcard local/app/css/*.css)
+HTML = $(wildcard local/app/templates/*.html)
 TEMPLATES = $(HTML:.html=.js)
 
 build: components $(SRC) $(CSS) $(TEMPLATES)

@@ -11105,8 +11105,8 @@ require.register("spini-backbone-router/index.js", function(module, exports, req
 // -------------------
 
 var _ = require('underscore');
-var Events = require('timoxley/backbone-events');
-var History = require('spini-backbone-history');
+var Events = require('backbone-events');
+var History = require('backbone-history');
 
 // Routers map faux-URLs to actions, and fire events when routes are
 // matched. Creating a new one sets its `routes` hash, if not set statically.
@@ -11429,9 +11429,22 @@ _.extend(History.prototype, Events, {
 });
 
 });
+require.register("button/index.js", function(module, exports, require){
+module.exports = "this is a button component :P";
+});
+require.register("searchbox/index.js", function(module, exports, require){
+var button = require('button');
+
+module.exports = {
+  searchbox: "this is the searchbox component",
+  button: button
+};
+});
 require.register("app/js/codedoc.js", function(module, exports, require){
 var codedoc = {};
 codedoc.views = {};
+
+exports = 'evviva mi piglio pure la dipendenza!';
 });
 require.register("app/js/codedoc.view.home.js", function(module, exports, require){
 var $ = require('component-jquery');
@@ -11490,8 +11503,7 @@ $(function() {
 });
 require.register("app/js/codedoc.app.js", function(module, exports, require){
 var $ = require('component-jquery');
-var page = require('visionmedia-page.js');
-var stick = require('onirame-stick');
+
 
 $(function() {
 
@@ -11510,10 +11522,18 @@ $(function() {
   }
 });
 });
+require.register("app/index.js", function(module, exports, require){
+// var codedoc = require('app/js/codedoc.js');
+var searchbox = require('searchbox');
+
+console.log('e dajeco tutto!');
+console.log(searchbox);
+});
 require.alias("app/js/codedoc.js", "codedoc/deps/app/js/codedoc.js");
 require.alias("app/js/codedoc.view.home.js", "codedoc/deps/app/js/codedoc.view.home.js");
 require.alias("app/js/codedoc.view.doc.js", "codedoc/deps/app/js/codedoc.view.doc.js");
 require.alias("app/js/codedoc.app.js", "codedoc/deps/app/js/codedoc.app.js");
+require.alias("app/index.js", "codedoc/deps/app/index.js");
 require.alias("component-underscore/index.js", "app/deps/underscore/index.js");
 
 require.alias("component-jquery/index.js", "app/deps/jquery/index.js");
@@ -11547,3 +11567,6 @@ require.alias("component-jquery/index.js", "spini-backbone-history/deps/jquery/i
 
 require.alias("timoxley-backbone-events/index.js", "spini-backbone-history/deps/backbone-events/index.js");
 require.alias("component-object/index.js", "timoxley-backbone-events/deps/object/index.js");
+
+require.alias("searchbox/index.js", "app/deps/searchbox/index.js");
+require.alias("button/index.js", "searchbox/deps/button/index.js");

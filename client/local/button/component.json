@@ -1,0 +1,6 @@
+{
+  "name": "button",
+  "description": "Button component",
+  "dependencies": {},
+  "scripts": ["index.js"]
+}
