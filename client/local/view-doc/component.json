@@ -1,0 +1,16 @@
+{
+  "name": "view-doc",
+  "description": "View Doc component",
+  "dependencies": {
+    "component/jquery": "*",
+    "timoxley/backbone-view": "*",
+    "component/domify": "*"
+  },
+  "scripts": [
+    "index.js",
+    "template.js"
+  ],
+  "styles": [
+    "style.css"
+  ]
+}

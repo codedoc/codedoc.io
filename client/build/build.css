@@ -4,10 +4,6 @@
 
 
 
-body {
-  font-family: 'Inconsolata', sans-serif
-}
-
 .page {
   display: none;
   position: relative
@@ -59,4 +55,12 @@ input:-moz-placeholder {
 
 input:-ms-input-placeholder {
   font-weight: 300
+}
+#doc h1 {
+  color: red;
+  font-size: 50px;
+  text-align: center
+}
+body {
+  font-family: 'Inconsolata', sans-serif
 }

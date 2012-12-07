@@ -1,9 +1,0 @@
-{
-  "name": "searchbox",
-  "description": "Searchbox component",
-  "dependencies": {},
-  "scripts": ["index.js"],
-  "local": [
-    "button"
-  ]
-}

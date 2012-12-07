@@ -2,6 +2,10 @@
   "name": "codedoc",
   "description": "Code documentation platform",
   "version": "0.0.1",
-  "local": ["app"],
-  "paths": ["local"]
+  "local": [
+    "app"
+  ],
+  "paths": [
+    "local"
+  ]
 }

@@ -46,10 +46,10 @@ server.listen(8002, function() {
 });
 
 
-server.get('/:user/:project', function(req, res) {
-  var params = req.params;
-  res.redirect('/#/docs/' + params.user + '/' + params.project);
-});
+// server.get('/:user/:project', function(req, res) {
+//   var params = req.params;
+//   res.redirect('/#/docs/' + params.user + '/' + params.project);
+// });
 
 server.get('/api/0/docs/:user/:project', function(req, res) {
   var params = req.params;

@@ -1,8 +1,9 @@
 
-SRC = $(wildcard local/app/index.js local/app/js/*.js)
-CSS = $(wildcard local/app/css/*.css)
-HTML = $(wildcard local/app/templates/*.html)
+SRC = $(wildcard local/*/*.js)
+CSS = $(wildcard local/*/*.css)
+HTML = $(wildcard local/*/*.html)
 TEMPLATES = $(HTML:.html=.js)
+COMPONENTS = $(wildcard local/*/component.json)
 
 build: components $(SRC) $(CSS) $(TEMPLATES)
 	@component build
