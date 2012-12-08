@@ -6,4 +6,4 @@ Thumbs.db
 node_modules
 components
 build
-clinet/local/*/template.js
+client/local/*/template.js
