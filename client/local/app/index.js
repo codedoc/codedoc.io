@@ -10,8 +10,8 @@ module.exports = Router.extend({
 
   initialize: function() {
     var anchors = {
-      home: $('#home'),
-      doc: $('doc')
+      home: $('#anchor-home'),
+      doc: $('#anchor-doc')
     };
 
     var views = {

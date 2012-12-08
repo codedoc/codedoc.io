@@ -1,22 +1,23 @@
 var $ = require('jquery');
 var domify = require('domify');
 var View = require('backbone-view');
-var handlebars = require('handlebars');
 var template = require('./template');
 var template_api = require('./template-api');
+require('handlebars.js');
 
 module.exports = View.extend({
 
   initialize: function (options) {
     this.setElement(domify(template));
-    this.t = handlebars.compile(template_api);
+    this.compiled = Handlebars.compile(template_api);
     return this;
   },
 
   render: function (docs) {
     this.$el
+      .show()
       .find('#doc-api')
-      .html(this.t(docs));
+      .html(this.compiled(docs));
 
     return this;
   },
