@@ -1,0 +1,18 @@
+{
+  "name": "doc",
+  "description": "Doc view component",
+  "dependencies": {
+    "component/jquery": "*",
+    "timoxley/backbone-view": "*",
+    "component/domify": "*",
+    "kelonye/handlebars.js": "*"
+  },
+  "scripts": [
+    "index.js",
+    "template.js",
+    "template-api.js"
+  ],
+  "styles": [
+    "style.css"
+  ]
+}

@@ -1,0 +1,52 @@
+
+.page {
+  display: none;
+  position: relative;
+}
+
+#logo {
+  position: absolute;
+  left: -378px;
+  margin-left: 50%;
+  /*margin-right: auto;*/
+  font-size: 140px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.letter-box {
+  float: left;
+  font-weight: 600;
+  border: 1px solid gray;
+  border-radius: 1px;
+  margin: 2px;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-shadow: 1px 1px 6px #CCC;
+}
+
+#search {
+  position: absolute;
+  left: -378px;
+  margin-left: 50%;
+  margin-top: 274px;
+  text-align: center;
+  font-size: 36px;
+}
+
+#search-input {
+  border: none;
+  background-color: rgba(230,230,230,0.04);
+  padding-left: 4px;
+  margin-left: -20px;
+}
+
+input::-webkit-input-placeholder {
+  font-weight: 300;
+}
+input:-moz-placeholder {
+  font-weight: 300;
+}
+input:-ms-input-placeholder {
+  font-weight: 300;
+}
