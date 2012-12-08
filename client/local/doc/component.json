@@ -11,7 +11,7 @@
     "index.js",
     "template.js",
     "template-api.js",
-    "example.js"
+    "example-json.js"
   ],
   "styles": [
     "style.css"
