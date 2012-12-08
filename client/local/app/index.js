@@ -1,6 +1,6 @@
 var $ = require('jquery');
-var Home = require('view-home');
-var Doc = require('view-doc');
+var Home = require('home');
+var Doc = require('doc');
 var Router = require('backbone-router');
 
 module.exports = Router.extend({
@@ -9,12 +9,21 @@ module.exports = Router.extend({
   next: null,
 
   initialize: function() {
+    var anchors = {
+      home: $('#home'),
+      doc: $('doc')
+    };
+
     var views = {
       home: new Home(),
       doc: new Doc()
     };
 
+    anchors.home.after(views.home.el);
+    anchors.doc.after(views.doc.el);
+
     this.views = views;
+    this.anchors = anchors;
     this.history = Router.history;
     this.history.start(/*{pushState: true}*/);
   },

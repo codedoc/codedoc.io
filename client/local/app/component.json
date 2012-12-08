@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "description": "App main component",
+  "description": "App view component",
   "dependencies": {
     "component/jquery": "*",
     "spini/backbone-router": "*"
@@ -12,7 +12,7 @@
     "style.css"
   ],
   "local": [
-    "view-home",
-    "view-doc"
+    "home",
+    "doc"
   ]
 }
