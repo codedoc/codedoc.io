@@ -1,5 +1,5 @@
 {
-  "name": "view-home",
+  "name": "home",
   "description": "View Home component",
   "dependencies": {
     "component/jquery": "*",

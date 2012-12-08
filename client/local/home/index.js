@@ -7,14 +7,7 @@ var template = require('./template');
 module.exports = backbone_view.extend({
 
   initialize: function(options) {
-    console.log('initializing view-doc with options: ');
-    console.log(options);
-
-    var domified = $(template);
-    console.log(domified);
-    this.$el = domified;
-    console.log($('body'));
-    $('body').append(domified);
+    this.setElement(domify(template));
     return this;
   },
 
@@ -24,8 +17,8 @@ module.exports = backbone_view.extend({
   },
 
   hide: function() {
-    console.log('view-doc - hide');
     this.$el.hide();
+    return this;
   },
 
   events: {}

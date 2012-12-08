@@ -1,14 +1,16 @@
 {
-  "name": "view-doc",
-  "description": "View Doc component",
+  "name": "doc",
+  "description": "Doc view component",
   "dependencies": {
     "component/jquery": "*",
     "timoxley/backbone-view": "*",
-    "component/domify": "*"
+    "component/domify": "*",
+    "kelonye/handlebars.js": "*"
   },
   "scripts": [
     "index.js",
-    "template.js"
+    "template.js",
+    "template-api.js"
   ],
   "styles": [
     "style.css"
