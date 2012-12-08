@@ -6,7 +6,8 @@
     "spini/backbone-router": "*"
   },
   "scripts": [
-    "index.js"
+    "index.js",
+    "template.js"
   ],
   "styles": [
     "style.css"

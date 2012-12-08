@@ -1,0 +1,1 @@
+module.exports = '<div>\n  <h2>API</h2>\n  <div>lots of methods</div>\n</div>';

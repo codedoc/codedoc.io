@@ -2,6 +2,7 @@ var $ = require('jquery');
 var Home = require('home');
 var Doc = require('doc');
 var Router = require('backbone-router');
+var template = require('./template');
 
 module.exports = Router.extend({
 
@@ -9,6 +10,8 @@ module.exports = Router.extend({
   next: null,
 
   initialize: function() {
+    $('body').html(template);
+
     var anchors = {
       home: $('#anchor-home'),
       doc: $('#anchor-doc')
