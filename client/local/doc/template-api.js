@@ -1,1 +1,1 @@
-module.exports = '<div>\n  <h2>API</h2>\n  <div>lots of methods</div>\n</div>';
+module.exports = '<div>\n  <h2>API</h2>\n  <div>lots of methods</div>\n  <ul>\n  {{#each .}}\n    <li>{{this}}</li>\n  {{/each}}\n  </ul>\n</div>';

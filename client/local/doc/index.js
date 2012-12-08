@@ -3,6 +3,7 @@ var domify = require('domify');
 var View = require('backbone-view');
 var template = require('./template');
 var template_api = require('./template-api');
+var example = require('./example-json')
 require('handlebars.js');
 
 module.exports = View.extend({
@@ -17,7 +18,7 @@ module.exports = View.extend({
     this.$el
       .show()
       .find('#doc-api')
-      .html(this.compiled(docs));
+      .html(this.compiled(example));
 
     return this;
   },
