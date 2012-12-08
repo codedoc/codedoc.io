@@ -19,7 +19,6 @@ module.exports = Router.extend({
     this.history.start(/*{pushState: true}*/);
   },
 
-
   goto: function() {
     this.current && this.current.hide();
     this.next.render();
