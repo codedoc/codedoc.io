@@ -1,6 +1,6 @@
-# server
+# codedoc.io
 
-codedoc server
+codedoc.io webserver
 
 ## License
 
